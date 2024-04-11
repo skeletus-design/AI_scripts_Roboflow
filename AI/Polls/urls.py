@@ -6,5 +6,7 @@ from django.conf import settings
 
 
 urlpatterns = [
-    path('', views.display_video, name='main')
+    path('', views.display_video, name='main'),
+    path('download/',
+         views.download_cheatsheet, name='download_cheatsheet'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
